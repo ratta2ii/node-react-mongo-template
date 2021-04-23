@@ -1,0 +1,21 @@
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+        <h1>Articles</h1>
+    </div>
+
+    <div class="box">
+        <% articleList.forEach(function(article) { %>
+            <div class="item">
+                <input type="checkbox" name="checkbox" value="<%= article._id %>" onChange="this.form.submit()" />
+                <h2>
+                    <%= article.title %>
+                </h2>
+                <p>
+                    <%= article.content %>
+                </p>
+            </div>
+            <% }) %>
+    </div>
+
+<%- include("footer") -%>
